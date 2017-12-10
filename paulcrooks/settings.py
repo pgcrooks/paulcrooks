@@ -25,7 +25,7 @@ SECRET_KEY = 'ryk$n&ktbcc_#%7qx+4cxzao+w25ctpr872xpw#&6t)=fxbsaa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['paulcrooks.herokuapp.com']
 
 
 # Application definition
