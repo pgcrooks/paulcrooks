@@ -47,7 +47,7 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
+								<span class="image main"><img src="{% static 'pages/images/pic01.jpg' %}" alt="" /></span>
 								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#projects">awesome work</a>.</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
 							</article>
@@ -55,17 +55,25 @@
 						<!-- Projects -->
 							<article id="projects">
 								<h2 class="major">Projects</h2>
-								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<span class="image main"><img src="{% static 'pages/images/pic02.jpg' %}" alt="" /></span>
 								<p>Personal website. Raspberry Pi. Qwiz.</p>
 							</article>
 
 						<!-- Instagram -->
 							<article id="instagram">
 								<h2 class="major">Instagram</h2>
-								<span class="image main"><img src="{% static 'pages/images/pic03.jpg' %}" alt="" /></span>
 								{% load instagram_client %}
-								<h1>Instagram media wall</h1>
-								{% instagram_recent_media_wall username="pgcrooks" %}
+								{% instagram_user_recent_media pgcrooks %}
+								<div id="django_recent_media_wall">
+									{% for media in recent_media %}
+									  <div class="django_instagram_media_wall_item">
+										<a href="{{ media.display_src }}" target="_blank" title="{{ media.caption }}">
+										  <img src="{{ media.thumbnail_src }}"/>
+										  <span>{{ media.caption }}</span>
+										</a>
+									  </div>
+									{% endfor %}
+								  </div>
 							</article>
 
 						<!-- Contact -->
