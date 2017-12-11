@@ -62,8 +62,10 @@
 						<!-- Instagram -->
 							<article id="instagram">
 								<h2 class="major">Instagram</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>I use this every so often.</p>
+								<span class="image main"><img src="{% static 'pages/images/pic03.jpg' %}" alt="" /></span>
+								{% load instagram_client %}
+								<h1>Instagram media wall</h1>
+								{% instagram_recent_media_wall username="pgcrooks" %}
 							</article>
 
 						<!-- Contact -->
