@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'paulcrooks.herokuapp.com',
+    'www.paulcrooks.co.uk',
     'localhost'
 ]
 
