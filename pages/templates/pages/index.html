@@ -68,8 +68,7 @@
 									{% for media in recent_media %}
 									  <div class="django_instagram_media_wall_item">
 										<a href="{{ media.display_src }}" target="_blank" title="{{ media.caption }}">
-										  <img src="{{ media.thumbnail_src }}"/>
-										  <span>{{ media.caption }}</span>
+										  <img class="resize insta" src="{{ media.thumbnail_src }}"/>
 										</a>
 									  </div>
 									{% endfor %}

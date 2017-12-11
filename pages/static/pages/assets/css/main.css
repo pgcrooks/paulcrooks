@@ -682,6 +682,16 @@
 
 		}
 
+		img.insta {
+			float: left;
+			padding: 5px;
+		}
+
+		img.resize {
+			width: 11rem;
+			height: auto;
+		}
+
 /* List */
 
 	ol {
