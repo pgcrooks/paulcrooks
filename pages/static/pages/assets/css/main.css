@@ -682,9 +682,11 @@
 
 		}
 
+/* Instagram Feed */
+
 		img.insta {
 			float: left;
-			padding: 5px;
+			margin: 4px;
 		}
 
 		img.resize {
