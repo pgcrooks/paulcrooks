@@ -28,7 +28,7 @@
 						<div class="content">
 							<div class="inner">
 								<h1>Paul Crooks</h1>
-								<p>Senior embedded software engineer with a dirty Python habit.</p>
+								<p>Senior embedded software engineer with a passion for the unknown.</p>
 							</div>
 						</div>
 						<nav>
@@ -47,13 +47,12 @@
 						<!-- Blog -->
 							<article id="blog">
 								<h2 class="major">Blog</h2>
-								<span class="image main"><img src="{% static 'pages/images/pic02.jpg' %}" alt="" /></span>
 								{% if latest_post_list %}
-								<ul>
 									{% for post in latest_post_list %}
-										<li>{{ post.title }}</li>
+										<h3 class="major">{{ post.title }}</h3>
+										<p>Posted {{ post.pub_date }}</p>
+										<p>{{ post.text }}</p>
 									{% endfor %}
-								</ul>
 								{% else %}
 									<p>No blog posts available</p>
 								{% endif %}
