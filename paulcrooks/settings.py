@@ -15,15 +15,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ryk$n&ktbcc_#%7qx+4cxzao+w25ctpr872xpw#&6t)=fxbsaa'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# Secret key is stored in the env
+SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 ALLOWED_HOSTS = [
     'paulcrooks.herokuapp.com',
@@ -76,9 +69,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'paulcrooks.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
