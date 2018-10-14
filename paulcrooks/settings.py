@@ -29,7 +29,6 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
-    'django_instagram',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

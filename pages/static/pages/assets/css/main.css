@@ -682,18 +682,6 @@
 
 		}
 
-/* Instagram Feed */
-
-		img.insta {
-			float: left;
-			margin: 4px;
-		}
-
-		img.resize {
-			width: 11rem;
-			height: auto;
-		}
-
 /* List */
 
 	ol {
