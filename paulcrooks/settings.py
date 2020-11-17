@@ -19,11 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 ALLOWED_HOSTS = [
-    'paulcrooks.herokuapp.com',
-    'paulcrooks-staging.herokuapp.com',
-    'paulcrooks-prod.herokuapp.com'
-    'www.paulcrooks.co.uk',
-    'localhost'
+    '.herokuapp.com',
+    '.paulcrooks.co.uk'
 ]
 
 
