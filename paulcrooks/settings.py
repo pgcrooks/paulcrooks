@@ -20,7 +20,8 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 ALLOWED_HOSTS = [
     '.herokuapp.com',
-    '.paulcrooks.co.uk'
+    '.paulcrooks.co.uk',
+    'localhost',
 ]
 
 
