@@ -21,6 +21,7 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 ALLOWED_HOSTS = [
     'paulcrooks.herokuapp.com',
     'paulcrooks-staging.herokuapp.com',
+    'paulcrooks-prod.herokuapp.com'
     'www.paulcrooks.co.uk',
     'localhost'
 ]
