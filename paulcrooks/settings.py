@@ -20,7 +20,8 @@ SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
 ALLOWED_HOSTS = [
     '.herokuapp.com',
-    '.paulcrooks.co.uk'
+    '.paulcrooks.co.uk',
+    'localhost',
 ]
 
 
@@ -70,8 +71,12 @@ WSGI_APPLICATION = 'paulcrooks.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'paulcrooks',
+        'USER': 'pcdb',
+        'PASSWORD': 'Letmein154',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
