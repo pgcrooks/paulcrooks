@@ -20,6 +20,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Secret key is stored in the env
 SECRET_KEY = os.environ['DJANGO_SECRET_KEY']
 
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
 ALLOWED_HOSTS = [
     '.herokuapp.com',
     '.paulcrooks.co.uk',
