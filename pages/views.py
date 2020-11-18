@@ -8,8 +8,15 @@ def index(request):
     """
     Display the index page
     """
-    latest_post_list = Post.objects.order_by('-pub_date')[:5]
+    # latest_post_list = Post.objects.order_by('-pub_date')[:5]
     template = loader.get_template('pages/index.html')
+    latest_post_list = [
+        {
+            "title": "Hardcoded",
+            "pub_date": "18/11/2020",
+            "text": "Lorum ipsum",
+        },
+    ]
     context = {
         'latest_post_list': latest_post_list,
     }
